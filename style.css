@@ -1,0 +1,294 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+    width: 100%;
+    
+
+}
+/* CONTENEDOR HEADER */
+.contenedor-header {
+    position: relative;
+        
+
+}
+/* BOTON LOGO HOME*/
+.logo-portada {
+    position: absolute;
+    z-index: 1001;
+    padding: 20px;
+    
+}
+
+.logo-boton {
+    text-decoration: none; 
+}
+
+.logo-boton:hover .logo {
+    opacity: 0.8; 
+}
+
+.logo {
+    width: 100px; 
+    height: auto; 
+    transition: opacity 0.3s ease; 
+}
+
+/* PORTADA */
+.portada {
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+/* TEXTO PORTADA */
+.texto-portada { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 5em; 
+ }
+/*IMG PORTADA*/
+.img-portada  { 
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover;
+}  
+/* NAV */
+.navbar {
+    justify-content: flex-end;
+    display: flex;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 20px; 
+    color: #ffffff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+    width: 100%;
+    top: 0;
+}
+
+/* COLOR CURSOR AL PASAR SOBRE BOTONES */
+.navbar-nav .nav-link:hover {
+    background-color: #f1f1f1; 
+}
+
+/* BOTON ACTIVO */
+.navbar-nav .nav-item.active .nav-link {
+    color: #fff; 
+}
+
+/* BOTON DESPLEGABLE CUANDO PASO MOUSE POR ENCIMA*/
+.dropdown:hover #serviciosDropdown {
+    display: block;
+}
+
+
+ 
+/*BODY*/
+body  { 
+    margin:0;    
+    padding: 0;
+}  
+
+/*PARRAFO DESCRIPCION*/
+.parrafo-descripcion { 
+    text-align: justify;
+    padding: 0 20px;
+    color: rgb(11, 11, 11);
+    font-size: larger ;
+}  
+
+/*TITULO*/
+.titulo {font-size: x-large;
+         color: rgb(11, 11, 11);
+
+}
+
+/*TEXTO DESCRIPCION SOBRE MI*/
+.texto-sobremi {
+    color: rgb(11, 11, 11);
+    font-size: x-large;
+    padding: 30px;
+}
+/* GRID VIDEOS CONTAINER */
+.videos-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+}
+
+/* CONTENEDOR DE VIDEOS - ESTILO */
+.video-container {
+    border: 1px ; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+/* TITULO DE VIDEO */
+.titulo-video {
+    margin-top: 0; 
+}
+
+/* VIDEOS */
+.video {
+    max-width: 100%; 
+}
+
+
+/* FOOTER */
+#footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.footer-columna {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section {
+    padding: 10px;
+    text-align: center; 
+}
+
+.menu-contactos {
+    text-align: center; 
+    list-style-type: none;
+}
+
+.contenido-newsletter label {
+    text-align: left; 
+}
+
+.home-footer {
+    color: #fff;
+    background-color: #333;
+    text-align: right;
+}
+.ubicacion-imagen {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+}
+
+
+
+/*DERECHOS RESERVADOS*/
+.derechos-reservados  { 
+    text-align: center;
+    color: white;
+    background-color: black;
+}  
+
+/*      FILE SERVICIOS            */
+
+/*PORTADA SERVICIOS*/
+.portada-servicios {
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+/*IMAGEN PORTADA SERVICIOS*/
+.img-portada-servicios {
+    width: 100vw; 
+    height: 40vh; 
+    object-fit: cover;
+}
+
+/* TARJETA */
+.tarjeta {
+    width: 300px; 
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    overflow: hidden; 
+    position: relative;
+}
+
+/* TARJETAS SERVICIOS */
+.tarjetas-servicios {
+    display: flex; 
+    gap: 30px; 
+    justify-content: space-around; 
+}
+
+/* IMAGEN TARJETA */
+.imagen-tarjeta {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    transition: transform 0.3s ease; 
+    
+}
+
+/* CUERPO TARJETA */
+.cuerpo-tarjeta {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    padding: 50px; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+/* TEXTO INVISIBLE CUANDO PASO MOUSE */
+.tarjeta:hover .cuerpo-tarjeta {
+    opacity: 1; 
+}
+
+/* TITULO TARJETA */
+.titulo-tarjeta {
+    font-size: x-large; 
+    margin-bottom: 10px; 
+}
+
+/* BOTON TARJETA */
+.boton-tarjeta {
+    display: block; 
+    width: 100%; 
+    text-align: center; 
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 0; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+/* CAMBIA DE COLOR CUANDO PASO EL MOUSE */
+.boton-tarjeta:hover {
+    background-color: #0056b3; 
+}
+
+
+
+
+
+
+
