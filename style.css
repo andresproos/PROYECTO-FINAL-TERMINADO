@@ -127,27 +127,19 @@ body  {
     font-size: x-large;
     padding: 30px;
 }
-/* GRID VIDEOS CONTAINER */
-.videos-container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px; 
-}
-
 /* CONTENEDOR DE VIDEOS - ESTILO */
-.video-container {
-    border: 1px ; 
-    padding: 20px; 
-    text-align: center; 
+.videos-container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 50px;
 }
 
-/* TITULO DE VIDEO */
-.titulo-video {
-    margin-top: 0; 
-}
-
-/* VIDEOS */
+/* VIDEOS PAG PRINCIPAL*/
 .video {
+    width: calc(50% - 20px);
+    border-radius: 10px; 
     max-width: 100%; 
 }
 
@@ -162,18 +154,27 @@ body  {
 }
 
 .footer-columna {
-    flex: 1;
-    margin-right: 20px;
+    display: flex; 
+    justify-content: space-between;
 }
 
-.footer-section {
-    padding: 10px;
-    text-align: center; 
+.footer-section label,
+.footer-section input,
+.footer-section textarea,
+.footer-section button {
+    width: 100%; 
+    margin-bottom: 1px;
+    border-radius: 5px; 
 }
 
 .menu-contactos {
-    text-align: center; 
     list-style-type: none;
+    padding: 0;
+    font-size: x-large;
+    
+}
+.menu-contactos li {
+    margin-bottom: 10px;
 }
 
 .contenido-newsletter label {
@@ -189,8 +190,8 @@ body  {
     width: 100%; 
     max-width: 400px; 
     height: auto; 
+    border-radius: 5px;
 }
-
 
 
 /*DERECHOS RESERVADOS*/
@@ -274,7 +275,7 @@ body  {
     display: block; 
     width: 100%; 
     text-align: center; 
-    background-color: #007bff; 
+    background-color: #db73d3; 
     color: white; 
     padding: 10px 0; 
     text-decoration: none; 
@@ -283,8 +284,35 @@ body  {
 
 /* CAMBIA DE COLOR CUANDO PASO EL MOUSE */
 .boton-tarjeta:hover {
-    background-color: #0056b3; 
+    background-color: #ac0d9e; 
 }
+
+/*      FILE SOBRE MI            */
+.texto-sobremi{
+    font-size: xx-large;
+    flex: 1;
+    text-align: justify;
+}
+.img-sobremi{
+    border-radius: 20px;
+    width: 300px;
+    margin-right: 20px;
+}
+.img-sobremi img {
+    width: 100%; 
+    border-radius: 20px; 
+    float: left; 
+    margin-right: 20px;
+    padding: 10px;
+}
+.contenedor-sobremi {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+
 
 
 
