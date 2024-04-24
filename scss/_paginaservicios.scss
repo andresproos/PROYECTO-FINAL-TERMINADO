@@ -1,0 +1,150 @@
+  /*      PAGINA SERVICIOS            */
+  
+  /*PORTADA SERVICIOS*/
+  .portada-servicios {
+    position: relative;
+    display: flex;
+    z-index: 1;
+  }
+  /*TEXTO PORTADA SERVICIOS*/
+  .texto-portada {
+    /*pantalla de escritorio*/
+    font-size: 5rem; 
+  }
+  
+  /*dispositivos moviles*/
+  @media (max-width: 768px) {
+    .texto-portada {
+      font-size: 2rem;
+    }
+  }
+
+    /*IMAGEN PORTADA SERVICIOS*/
+  .img-portada-servicios {
+    width: 100vw;
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  /* TARJETA */
+  .tarjeta {
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* TARJETAS SERVICIOS */
+  .tarjetas-servicios {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+  }
+
+  /*dispositivos moviles*/
+@media only screen and (max-width: 768px) {
+  .tarjetas-servicios {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .tarjeta {
+      width: 100%; 
+      text-align: center; 
+  }
+  .imagen-tarjeta {
+    width: 80%; 
+    max-width: 300px; 
+    min-height: 400px;
+    max-height: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+  .texto-exterior {
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+  }
+  .titulo-tarjeta {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+  }
+  .texto-tarjeta {
+      font-size: 1rem;
+  }
+  .tarjeta .cuerpo-tarjeta {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  /* IMAGEN TARJETA */
+  .imagen-tarjeta {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+  /*dispositivos moviles*/
+  @media only screen and (max-width: 768px) {
+    .imagen-tarjeta {
+      max-width: 90%; 
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  
+  /* CUERPO TARJETA */
+  .cuerpo-tarjeta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: $color-secundario;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+  }
+
+  
+  /* TEXTO INVISIBLE CUANDO PASO MOUSE */
+  .tarjeta:hover .cuerpo-tarjeta {
+    opacity: 1;
+  }
+  
+  /* TITULO TARJETA */
+  .titulo-tarjeta {
+    font-size: x-large;
+    margin-bottom: 10px;
+  }
+  
+  /* BOTON TARJETA */
+  .boton-tarjeta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #db73d3;
+    color: $color-secundario;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* CAMBIA DE COLOR CUANDO PASO EL MOUSE */
+  .boton-tarjeta:hover {
+    background-color: #ac0d9e;
+  }

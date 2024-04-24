@@ -1,0 +1,61 @@
+header {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  /* CONTENEDOR HEADER */
+  .contenedor-header {
+    position: relative;
+  }
+  
+  /* BOTON LOGO HOME*/
+  .logo-portada {
+    position: absolute;
+    z-index: 1001;
+    padding: 20px;
+  }
+  
+  .logo-boton {
+    text-decoration: none;
+  }
+  
+  .logo-boton:hover .logo {
+    opacity: 0.8;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* PORTADA */
+  .portada {
+    position: relative;
+    display: flex;
+    z-index: 1;
+  }
+  
+  /* TEXTO PORTADA */
+  .texto-portada {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 5em;
+  }
+  
+  /*IMG PORTADA*/
+  .img-portada {
+    width: 100vw;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }

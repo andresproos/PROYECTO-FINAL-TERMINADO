@@ -1,0 +1,39 @@
+ /*BODY*/
+ body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*PARRAFO DESCRIPCION*/
+  .parrafo-descripcion {
+    text-align: justify;
+    padding: 0 20px;
+    color: $color-primario;
+    font-size: larger;
+  }
+  
+  /*TITULO*/
+  .titulo {
+    font-size: x-large;
+    color: $color-primario;
+  }
+  
+  /*  CAROUSEL PAGINA PRINCIPAL  */
+  
+  /*dispositivos moviles*/
+  @media (max-width: 767px) {
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/*pantallas de escritorio*/
+@media (min-width: 768px) {
+  .carousel-item img {
+    max-width: 350px; 
+    height: auto;
+    margin: auto; 
+    border-radius: 15px;
+  }
+}

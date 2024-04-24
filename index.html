@@ -96,16 +96,41 @@
         
         
            
-                <!-- VIDEOS PAGINA PRINCIPAL-->
-
-                <main class="videos-container">
-                    <video width="640" height="360" controls>
-                        <source src="video/video2.mp4" type="video/mp4">
-                    </video>
-                    <video width="640" height="360" controls>
-                        <source src="video/video4.mp4" type="video/mp4">
-                    </video>
-                </main>
+                <!-- CAROUSEL PAGINA PRINCIPAL-->
+                    <div id="carousel-principal" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-img-container">
+                                    <img src="./img/carousel1.jpg" class="d-block w-100" alt="Foto Clientas">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-img-container">
+                                    <img src="./img/carousel2.jpg" class="d-block w-100" alt="Foto Clientas">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-img-container">
+                                    <img src="./img/carousel3.jpg" class="d-block w-100" alt="Foto Clientas">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-principal" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-principal" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                
+                
 
                 <!-- FOOTER -->
                 <footer id="footer">
@@ -117,7 +142,7 @@
                                 <li><a>📍 Devoto - CABA - Buenos Aires, Argentina</a></li>
                                 <li><a>✉ Info@BarquinMakeup.com</a></li>
                                 <li><a>✆ WhatsApp 11-1111-1111</a></li>
-                                <li><a>BarquinMakeup</a></li>
+                                <li><a>-LOGO INSTAGRAM + LINK-BarquinMakeup</a></li>
                             </ul>
                         </div>
                     </div>
