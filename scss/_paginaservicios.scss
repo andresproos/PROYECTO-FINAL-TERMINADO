@@ -67,7 +67,7 @@
 }
   .texto-exterior {
       width: 100%;
-      text-align: center;
+      text-align:initial ;
       margin-top: 15px;
   }
   .titulo-tarjeta {
@@ -76,6 +76,8 @@
   }
   .texto-tarjeta {
       font-size: 1rem;
+      list-style-type: none;
+
   }
   .tarjeta .cuerpo-tarjeta {
     padding: 10px;
@@ -85,6 +87,7 @@
     align-items: center;
   }
 }
+
   /* IMAGEN TARJETA */
   .imagen-tarjeta {
     width: 100%;
@@ -102,7 +105,7 @@
       margin-left: 5%;
       margin-right: 5%;
     }
-  }
+ }
   
   /* CUERPO TARJETA */
   .cuerpo-tarjeta {
@@ -148,3 +151,5 @@
   .boton-tarjeta:hover {
     background-color: #ac0d9e;
   }
+
+  
