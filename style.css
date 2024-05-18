@@ -25,6 +25,15 @@ header {
   text-decoration: none;
 }
 
+/* Animación de movimiento Logo-Boton */
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 .logo-boton:hover .logo {
   opacity: 0.8;
 }
@@ -33,6 +42,7 @@ header {
   width: 100px;
   height: auto;
   transition: opacity 0.3s ease;
+  animation: bobbing 1.5s ease-in-out infinite;
 }
 
 /* PORTADA */
@@ -86,12 +96,12 @@ header {
 
 /* COLOR CURSOR AL PASAR SOBRE BOTONES */
 .navbar-nav .nav-link:hover {
-  background-color: #f1f1f1;
+  background-color: #F49AD5;
 }
 
 /* BOTON ACTIVO */
 .navbar-nav .nav-item.active .nav-link {
-  color: #fff;
+  color: white;
 }
 
 /* BOTON DESPLEGABLE CUANDO PASO MOUSE POR ENCIMA*/
@@ -138,9 +148,14 @@ body {
 /*  CAROUSEL PAGINA PRINCIPAL  */
 /*dispositivos moviles*/
 @media (max-width: 767px) {
+  .carousel-item {
+    padding: 10px;
+  }
   .carousel-item img {
     max-width: 100%;
     height: auto;
+    margin: 5px 0;
+    margin-bottom: 10px;
   }
 }
 /*pantallas de escritorio*/
@@ -163,6 +178,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 15px;
+    margin-bottom: 20px;
   }
   /* Estilos flechas del carrusel */
   .carousel-control-prev-icon,

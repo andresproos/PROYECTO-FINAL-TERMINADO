@@ -22,9 +22,14 @@
   
   /*dispositivos moviles*/
   @media (max-width: 767px) {
-    .carousel-item img {
+    .carousel-item {
+      padding: 10px;
+    }
+      .carousel-item img {
         max-width: 100%;
         height: auto;
+        margin: 5px 0;
+        margin-bottom: 10px;
     }
 }
 
@@ -48,6 +53,7 @@
       width: 100%;
       height: auto;
       border-radius: 15px;
+      margin-bottom: 20px;
   }
   /* Estilos flechas del carrusel */
     .carousel-control-prev-icon,
