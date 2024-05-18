@@ -7,6 +7,7 @@
     text-align: justify;
     color: $color-primario;
     padding: 30px;
+    overflow: hidden;
   }
 
   .img-sobremi {
@@ -21,12 +22,29 @@
     float: left;
     margin-right: 20px;
     padding: 10px;
+    margin-top: 100px;
+  }
+  
+  .img-sobremi2 {
+    border-radius: 20px;
+    width: 300px;
+    margin-right: 20px;
+    align-self: flex-end;
+    
+  }
+  
+  .img-sobremi2 img {
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    height: auto;
+    margin-bottom: 100px;
   }
   
   .contenedor-sobremi {
     display: flex;
-    align-items: center;
-    height: 60vh;
+    align-items: stretch;
+    
   }
  
   /*dispositivos moviles */
@@ -48,4 +66,7 @@
   .img-sobremi {
   display: none;
   }
+  .img-sobremi2 {
+    display: none;
+    }
 }

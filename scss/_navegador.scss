@@ -38,16 +38,16 @@
 
     /* Color del texto del menú desplegable */
     .dropdown-menu .dropdown-item {
-      color: $color-secundario; 
+      color: $gris-oscuro; 
     }
 
     /* Color de fondo del menú desplegable */
     .dropdown-menu {
-      background-color: $color-tres;
+      background-color: $rosa-suave;
     }
 
     /* Color del texto del menú desplegable cuando se pasa el cursor sobre él */
     .dropdown-menu .dropdown-item:hover {
-      background-color: #ac0d9e; 
-      color: #ccc;
+      background-color:$rosa-suave; 
+      color: $color-secundario;
     }

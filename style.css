@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   position: absolute;
   display: flex;
@@ -73,7 +74,7 @@ header {
 
 .navbar-nav .nav-link {
   padding: 10px 20px;
-  color: #ffffff;
+  color: white;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -98,83 +99,20 @@ header {
   display: block;
 }
 
-/* FOOTER */
-#footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #333;
-  color: #f1f1f1;
+/* Color del texto del menú desplegable */
+.dropdown-menu .dropdown-item {
+  color: #333;
 }
 
-footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  position: relative;
-  z-index: 100;
-  clear: both;
+/* Color de fondo del menú desplegable */
+.dropdown-menu {
+  background-color: #F49AD5;
 }
 
-.footer-columna {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-section label,
-.footer-section input,
-.footer-section textarea,
-.footer-section button {
-  width: 100%;
-  margin-bottom: 1px;
-  border-radius: 5px;
-}
-
-/* FOOTER - MEDIA QUERIES PARA DISPOSITIVOS MOVILES */
-@media screen and (max-width: 768px) {
-  #footer {
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-columna {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-}
-.menu-contactos {
-  list-style-type: none;
-  padding: 0;
-  font-size: x-large;
-}
-
-.menu-contactos li {
-  margin-bottom: 10px;
-}
-
-.contenido-newsletter label {
-  text-align: left;
-}
-
-.home-footer {
-  color: #fff;
-  background-color: #333;
-  text-align: right;
-}
-
-.ubicacion-imagen {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 5px;
-}
-
-/*DERECHOS RESERVADOS*/
-.derechos-reservados {
-  text-align: center;
+/* Color del texto del menú desplegable cuando se pasa el cursor sobre él */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #F49AD5;
   color: white;
-  background-color: black;
 }
 
 /*BODY*/
@@ -207,21 +145,172 @@ body {
 }
 /*pantallas de escritorio*/
 @media (min-width: 768px) {
+  .carousel-inner {
+    width: 100%;
+  }
+  .carousel-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .carousel-item .carousel-img-container {
+    flex: 1;
+    margin: 0 10px;
+    max-width: 30%;
+  }
   .carousel-item img {
-    max-width: 350px;
+    width: 100%;
     height: auto;
-    margin: auto;
     border-radius: 15px;
   }
+  /* Estilos flechas del carrusel */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+  }
 }
+/* FOOTER */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  background-color: #333;
+  color: white;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  clear: both;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.footer-section label {
+  width: 100%;
+  margin-bottom: 1px;
+  border-radius: 5px;
+}
+
+/* Estilos para los campos de entrada */
+.footer-section input[type=text],
+.footer-section input[type=email],
+.footer-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(11, 11, 11);
+}
+
+.contenido-newsletter label {
+  text-align: left;
+}
+
+/* Estilos para el boton de enviar */
+.footer-section button[type=submit] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F49AD5;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor sobre el boton */
+.footer-section button[type=submit]:hover {
+  background-color: #f9c8e8;
+}
+
+.menu-contactos {
+  list-style-type: none;
+  padding: 0;
+  font-size: x-large;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  flex-grow: 2;
+}
+
+.menu-contactos li {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home-footer {
+  color: white;
+  background-color: #333;
+  text-align: right;
+}
+
+.contactanos, .ubicacion-titulo {
+  margin-bottom: 20px;
+}
+
+.ubicacion-imagen {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* FOOTER - MEDIA QUERIES PARA DISPOSITIVOS MOVILES */
+@media screen and (max-width: 768px) {
+  #footer {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-columna {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+/*DERECHOS RESERVADOS*/
+.derechos-reservados {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
 /*      PAGINA SOBRE MI            */
-/*TEXTO DESCRIPCION SOBRE MI*/
+/*TEXTO + IMAGEN DESCRIPCION SOBRE MI*/
 .texto-sobremi {
   font-size: xx-large;
   flex: 1;
   text-align: justify;
   color: rgb(11, 11, 11);
   padding: 30px;
+  overflow: hidden;
 }
 
 .img-sobremi {
@@ -236,12 +325,27 @@ body {
   float: left;
   margin-right: 20px;
   padding: 10px;
+  margin-top: 100px;
+}
+
+.img-sobremi2 {
+  border-radius: 20px;
+  width: 300px;
+  margin-right: 20px;
+  align-self: flex-end;
+}
+
+.img-sobremi2 img {
+  max-width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 100px;
 }
 
 .contenedor-sobremi {
   display: flex;
-  align-items: center;
-  height: 60vh;
+  align-items: stretch;
 }
 
 /*dispositivos moviles */
@@ -262,129 +366,86 @@ body {
   .img-sobremi {
     display: none;
   }
+  .img-sobremi2 {
+    display: none;
+  }
 }
-/*      PAGINA SERVICIOS            */
-/*PORTADA SERVICIOS*/
+/*   PAGINA SERVICIOS   */
+/* PORTADA SERVICIOS */
 .portada-servicios {
   position: relative;
   display: flex;
   z-index: 1;
 }
 
-/*TEXTO PORTADA SERVICIOS*/
+/* TEXTO PORTADA SERVICIOS */
+/* Pantalla de escritorio */
 .texto-portada {
-  /*pantalla de escritorio*/
   font-size: 5rem;
 }
 
-/*dispositivos moviles*/
+/* Dispositivos móviles */
 @media (max-width: 768px) {
   .texto-portada {
     font-size: 2rem;
   }
 }
-/*IMAGEN PORTADA SERVICIOS*/
+/* IMAGEN PORTADA SERVICIOS */
 .img-portada-servicios {
   width: 100vw;
   height: 40vh;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 /* TARJETA */
 .tarjeta {
-  width: 300px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
   overflow: hidden;
   position: relative;
 }
 
 /* TARJETAS SERVICIOS */
 .tarjetas-servicios {
-  display: flex;
-  gap: 30px;
-  justify-content: space-around;
+  margin-top: 30px;
 }
 
-/*dispositivos moviles*/
+/* Dispositivos móviles */
 @media only screen and (max-width: 768px) {
   .tarjetas-servicios {
-    display: flex;
     flex-direction: column;
-    gap: 30px;
-    justify-content: space-around;
     align-items: center;
   }
   .tarjeta {
-    width: 100%;
-    text-align: center;
-  }
-  .imagen-tarjeta {
-    width: 80%;
-    max-width: 300px;
-    min-height: 400px;
-    max-height: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  .texto-exterior {
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-  }
-  .titulo-tarjeta {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  .texto-tarjeta {
-    font-size: 1rem;
-  }
-  .tarjeta .cuerpo-tarjeta {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
   }
 }
 /* IMAGEN TARJETA */
 .imagen-tarjeta {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
-  object-fit: cover;
-  border: 2px solid #ccc;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
+     object-fit: cover;
+  border-bottom: 2px solid #ccc;
 }
 
-/*dispositivos moviles*/
-@media only screen and (max-width: 768px) {
-  .imagen-tarjeta {
-    max-width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
 /* CUERPO TARJETA */
 .cuerpo-tarjeta {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 50px;
-  opacity: 0;
+  right: 0;
+  box-sizing: border-box;
   transition: opacity 0.3s ease;
-  border: 2px solid #ccc;
-  border-radius: 20px;
+  opacity: 0;
+  overflow: hidden;
 }
 
-/* TEXTO INVISIBLE CUANDO PASO MOUSE */
 .tarjeta:hover .cuerpo-tarjeta {
   opacity: 1;
 }
@@ -393,6 +454,17 @@ body {
 .titulo-tarjeta {
   font-size: x-large;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* TEXTO TARJETA */
+.texto-tarjeta {
+  font-size: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* BOTON TARJETA */
@@ -401,10 +473,12 @@ body {
   width: 100%;
   text-align: center;
   background-color: #db73d3;
-  color: white;
+  color: #fff;
   padding: 10px 0;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 /* CAMBIA DE COLOR CUANDO PASO EL MOUSE */
@@ -416,6 +490,4 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
